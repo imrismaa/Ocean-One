@@ -9,6 +9,7 @@
       <title>Static Landing Page</title>
    </head>
    <body data-bs-spy="scroll" data-bs-target=".navbar">
+      <script src="code-program.js"></script>
 
       <!-- Navigation bar -->
       <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white">
@@ -43,7 +44,7 @@
                <div class="col-md-10">
                   <h1 class="text-white display-4">SAVE THE OCEAN</h1>
                   <p class="text-white">Protect our ocean, preserve our planet</p>
-                  <a href="#form" class="btn btn-brand">TAKE ACTION</a>
+                  <a class="btn btn-brand" onclick="takeAction()">TAKE ACTION</a>
                </div>
             </div>
          </div>
@@ -60,11 +61,13 @@
             <div class="row">
                <div class="col-lg-4 col-sm-6 p-4">
                   <h4 class="title-sm mt-4">ALIGN</h4>
-                  <p>
+                  <p id="contentFromAlign">
                      66% of people (73% of Millennials) are willing to pay more for products and services from companies committed 
                      to positive social and environmental impact.
                   </p>
+                  <textarea id="textArea" style="display: none;" cols="30" rows="10"></textarea>
                   <a href="#" class="btn btn-brand mt-4">LEARN MORE</a>
+                  <button id="editButton" class="btn btn-brand mt-4" onclick="showTextArea()">Edit</button>
                </div>
                <div class="col-lg-4 col-sm-6 p-4">
                   <h4 class="title-sm mt-4">KICKSTART</h4>
@@ -222,17 +225,18 @@
                <form>
                <div class="mb-3">
                   <small>Name</small>
-                  <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your Name">
+                  <input type="text" class="form-control" id="inputName" aria-describedby="emailHelp" placeholder="Your Name">
                </div>
                <div class="mb-3">
                   <small>Email</small>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="example@gmail.com">
+                  <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="example@gmail.com">
                </div>
                <div class="mb-3">
                   <small>Message</small>
-                  <textarea cols="30" rows="4" class="form-control" placeholder="Write Your Message Here..."></textarea>
+                  <textarea cols="30" rows="4" class="form-control"  id="inputMessage" placeholder="Write Your Message Here..."></textarea>
                </div>
-               <button type="submit" class="btn btn-brand">SEND</button>
+               <button onclick="sendForm(event)" type="submit" class="btn btn-brand">SEND</button>
+               <p id="output"></p>
                </form>
             </div>
          </div>
