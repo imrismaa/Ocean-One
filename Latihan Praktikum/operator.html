@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator</title>
+    <script>
+        // operator penugasan
+        var score = 100;
+        document.write("nilai awal = " + score + "<br>");
+
+        score += 5;
+        document.write("ditambah 5 = " + score + "<br>");
+
+        score -= 2;
+        document.write("dikurang 5 = " + score + "<br>");
+
+        score /= 4;
+        document.write("dibagi 4 = " + score + "<br>");
+
+        score **= 0;
+        document.write("dipangkat 0 = " + score + "<br>");
+
+        score %= 1;
+        document.write("dimodulo 1 = " + score + "<br>");
+        document.write("<br>");
+
+        // operator relasi atau perbandingan
+        var a = 20;
+        var b = 18;
+
+        var hasil = a == b;
+        document.write(`${a} sama dengan ${b} : ${hasil}<br>`)
+
+        var hasil = a > b;
+        document.write(`${a} lebih dari ${b} : ${hasil}<br>`)
+
+        var hasil = a < b;
+        document.write(`${a} kurang dari ${b} : ${hasil}<br>`)
+
+        var hasil = a != b;
+        document.write(`${a} tidak sama dengan ${b} : ${hasil}<br>`)
+        document.write("<br>");
+
+        // operator logika
+        var a = 20;
+        var b = 18;
+
+        var benar = a > b;
+        var salah = a < b;
+
+        var hasil = benar && salah;
+        document.write(`${benar} && ${salah} = ${hasil} <br>`);
+
+        var hasil = benar || salah;
+        document.write(`${benar} || ${salah} = ${hasil} <br>`);
+
+        var hasil = !benar;
+        document.write(`!${benar} = ${hasil} <br>`);
+
+        // operator bitwise
+        var a = 20;
+        var b = 18;
+
+        var hasil = a & b;
+        document.write(`${a} & ${b} = ${hasil} <br>`);
+        
+        var hasil = a | b;
+        document.write(`${a} | ${b} = ${hasil} <br>`);
+        
+        var hasil = a ^ b;
+        document.write(`${a} ^ ${b} = ${hasil} <br>`);
+        
+        var hasil = ~a;
+        document.write(`~${a} = ${hasil} <br>`);
+        
+        var hasil = a >> b;
+        document.write(`${a} >> ${b} = ${hasil} <br>`);
+        
+        var hasil = a << b;
+        document.write(`${a} << ${b} = ${hasil} <br>`);
+        
+        var hasil = a >>> b;
+        document.write(`${a} >>> ${b} = ${hasil} <br>`);
+        document.write("<br>");
+
+        // operator ternary
+        var question = confirm("Apakah kamu berumur diatas 18 tahun");
+        var hasil = question ? "Selamat datang" : "Kamu tidak boleh di sini";
+        document.write(hasil);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
